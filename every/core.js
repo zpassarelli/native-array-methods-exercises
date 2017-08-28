@@ -2,7 +2,7 @@
 // are even numbers.
 
 function allEven (input) {
-  return input;
+  return input % 2 === 0;
 };
 
 // Check to see if all elements in an array

@@ -1,18 +1,25 @@
 function sum (array) {
-  // your code here
-};
+  return array.reduce(function(pre,cur){
+    return pre + cur;
+  });
+}
 
 function productAll (array) {
-  // your code here
-};
+  return array.reduce(function(pre,cur){
+    return cur.reduce(function(pre2,cur2){
+      return pre2 * cur2;
+    });
+  });
+}
 
 function objectify (array) {
-  // your code here
-};
+  return array;
+}
 
 function luckyNumbers (array) {
-  // your code here
-};
+  return array;
+
+}
 
 module.exports = {
   sum: sum,
