@@ -20,8 +20,26 @@ function positiveRowsOnly (array) {
 
 function allSameVowels (array) {
   return array.filter(function(val){
-
+    return vowelCheck(val);
   });
+}
+
+function vowelCheck(str){
+  var vowel = 'x';
+  for(var i = 0, len = str.length; i < len; i++){
+    if(vowel == 'x'){
+      if('aeiou'.includes(str[i])){
+        vowel = str[i];
+      }
+    } else {
+      if('aeiou'.includes(str[i])){
+        if(vowel != str[i]){
+          return false;
+        }
+      }
+    }
+  }
+  return true;
 }
 
 module.exports = {
