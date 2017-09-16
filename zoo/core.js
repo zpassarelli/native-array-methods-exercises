@@ -1,5 +1,18 @@
+var data = require('./data');
+
 function entryCalculator (entrants) {
-  // your code here
+  if(entrants == undefined) return 0;
+  let total = 0
+  if(entrants['Adult']){
+    total += entrants['Adult'] * data.prices['Adult'];
+  }
+  if(entrants['Senior']){
+    total += entrants['Senior'] * data.prices['Senior'];
+  }
+  if(entrants['Child']){
+    total += entrants['Child'] * data.prices['Child'];
+  }
+  return total;
 };
 
 function schedule (dayName) {
